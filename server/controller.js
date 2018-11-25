@@ -1,6 +1,18 @@
-let ex = []
-let cal = []
-let id = 1
+let ex = [{
+    "id": 2,
+    "intensity": "low",
+    "duration": "12:42",
+    "date": "11/25/2018",
+    "time": "2:25 am"
+}]
+let cal = [{
+    "id": 1,
+    "calories": "2000",
+    "date": "11/25/2018",
+    "time": "3:52 am"
+}]
+let id = 3
+// functions for date and time keys to display nicely
 var newDate = function () {
     let date = new Date();
     return (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear()
@@ -10,14 +22,14 @@ var newTime = function () {
     if (date.getMinutes() <= 9) { var minutes = '0' + date.getMinutes() }
     else { minutes = date.getMinutes()}
     if (date.getHours() === 0) {
-        return 12 + ':' + minutes + ' am'
+        return 12 + ':' + `${minutes}am`
     }
     else if (date.getHours() <= 12) {
-        return date.getHours() + ':' + minutes + ' am'
-    }
-    else { return (date.getHours() - 12) + ':' + minutes + ' pm' }
-
+        return date.getHours() + ':' + `${minutes}am`}
+    else { return (date.getHours() - 12) + ':' + `${minutes}pm` }
+// Take spaces out of am pm? maybe?
 }
+//all modules for server page
 module.exports = {
     readCal: (req, res) => {
         res.status(200).send(cal)
