@@ -1,0 +1,32 @@
+
+.delete{
+    margin: none;
+    position: relative;
+    float: right;
+    height: 15px;
+    width: 15px;
+    background: url('https://www.drodd.com/images15/red-x21.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.edit{
+    margin: none;
+    position: relative;
+    float: right;
+    height: 15px;
+    width: 15px;
+    background: url('https://image.flaticon.com/icons/svg/61/61456.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.dropDownStuff{
+    display: none;
+  
+    
+}
+.show{
+    display: block;
+    position: static
+    
+}

@@ -20,6 +20,6 @@ app.put( `${urlCal}/:id`, controller.putCal)
 app.delete( `${urlCal}/:id`, controller.deleteCal)
 //note to self: put and delete use a id number after '/' 
 // and post uses a param after '/' such as a word or number of my choosing
-
+app.post('/api/datedObj',controller.putDatedObj)
 const port = 3001
 app.listen(port, () => console.log(`Life is meaningless on ${port}`))
